@@ -84,10 +84,14 @@ namespace Ejercicio1_Rally
             fVer.lbxResultados.Items.Clear();
             for (int n = 0; n < competencia.Contador; n++)
             {
-                int tiempo =  competencia.Tiempos[n];
+                int tiempo;
+                string nombre;
+                competencia.VerRegistro(n, out nombre, out tiempo);
+
                 int HH = tiempo / 60;
                 int MM=tiempo % 60;
-                fVer.lbxResultados.Items.Add($"{n:000} - {competencia.Nombres[n]} - {HH:00}:{MM:00}");
+
+                fVer.lbxResultados.Items.Add($"{n:000} - {nombre} - {HH:00}:{MM:00}");
             }
 
             fVer.ShowDialog();

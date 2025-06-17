@@ -62,7 +62,7 @@
             this.btnCargarTiempos.Name = "btnCargarTiempos";
             this.btnCargarTiempos.Size = new System.Drawing.Size(202, 52);
             this.btnCargarTiempos.TabIndex = 2;
-            this.btnCargarTiempos.Text = "Cargar Tiempos de competidores";
+            this.btnCargarTiempos.Text = "Cargar tiempos de competidores";
             this.btnCargarTiempos.UseVisualStyleBackColor = true;
             this.btnCargarTiempos.Click += new System.EventHandler(this.btnCargarTiempos_Click);
             // 

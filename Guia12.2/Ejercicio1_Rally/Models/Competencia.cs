@@ -8,19 +8,35 @@ namespace Ejercicio1_Rally.Models
 {
     public class Competencia
     {
-        public string[] Nombres = new string[100];
-        public int [] Tiempos= new int[100];
-        public int Contador = 0;
+        string[] nombres = new string[100];
+        int [] tiempos= new int[100];
+        public int Contador { get; private set; }
+
+        public Competencia()
+        {
+            Contador = 0;
+        }
+
+        public void VerRegistro(int idx,out string nombre,out int tiempo)
+        {
+            tiempo = 0;
+            nombre = "";
+            if (idx >= 0 && idx < Contador)
+            {
+                nombre = nombres[idx];
+                tiempo = tiempos[idx];
+            }
+        }
 
         public void AgregarCompetidor(string nombre)
         {
-            Nombres[Contador] = nombre;
+            nombres[Contador] = nombre;
             Contador++;
         }
 
         public void CargarTiempo(int numeroCompetidor, int HH, int MM)
         {
-            Tiempos[numeroCompetidor] = HH*60+MM;
+            tiempos[numeroCompetidor] = HH*60+MM;
         }
 
         public void OrderListadoPorTiempo()
@@ -29,18 +45,23 @@ namespace Ejercicio1_Rally.Models
             {
                 for (int sig = act+1; sig < Contador; sig++)
                 {
-                    if (Tiempos[act] > Tiempos[sig])
+                    if (tiempos[act] > tiempos[sig])
                     {
-                        string nombre = Nombres[act];
-                        Nombres[act] = Nombres[sig];
-                        Nombres[sig] = nombre;
-
-                        int tiempo = Tiempos[act];
-                        Tiempos[act] = Tiempos[sig];
-                        Tiempos[sig] = tiempo;
+                        Intercambiar(act, sig);
                     }
                 }
             }
+        }
+
+        void Intercambiar(int act, int sig)
+        {
+            string nombre = nombres[act];
+            nombres[act] = nombres[sig];
+            nombres[sig] = nombre;
+
+            int tiempo = tiempos[act];
+            tiempos[act] = tiempos[sig];
+            tiempos[sig] = tiempo;
         }
     }
 }

@@ -59,8 +59,8 @@
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">388</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">72</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">288</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">134</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">285</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">121</XPD:ATTR>
 <XPD:REF name="Model">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="bdwL9d5/lkS9w/vOwtjzuwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="6J0/Paj1SkyOi3nTcNVaugAA">
@@ -96,7 +96,7 @@
 <XPD:REF name="Views[1]">w7Lj7uvCTU6gZEpQsBJzVQAA</XPD:REF>
 <XPD:REF name="Views[2]">EsoASJctQkuyZ0+JaRPUzAAA</XPD:REF>
 <XPD:REF name="Views[3]">dzfE0vU1ike3ZY4R1aMRaAAA</XPD:REF>
-<XPD:ATTR name="#Operations" type="integer">4</XPD:ATTR>
+<XPD:ATTR name="#Operations" type="integer">3</XPD:ATTR>
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="ubHK8JY0CUuzn8r1qUUh8QAA">
 <XPD:ATTR name="Name" type="string">AgregarCompetidor</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
@@ -107,27 +107,7 @@
 <XPD:REF name="BehavioralFeature">ubHK8JY0CUuzn8r1qUUh8QAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="Operations[1]" type="UMLOperation" guid="twg6LiO8jU68s+Y1/36AuwAA">
-<XPD:ATTR name="Name" type="string">VerRegistro</XPD:ATTR>
-<XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
-<XPD:ATTR name="#Parameters" type="integer">3</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="Ek5EpiRN7Eqobdxv8tZVugAA">
-<XPD:ATTR name="Name" type="string">idx</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
-<XPD:REF name="BehavioralFeature">twg6LiO8jU68s+Y1/36AuwAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="qSeTvUNGbECVxQbz8CQdvgAA">
-<XPD:ATTR name="Name" type="string">nombre</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">out string</XPD:ATTR>
-<XPD:REF name="BehavioralFeature">twg6LiO8jU68s+Y1/36AuwAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="I4/H1BclZ02Nh9LH6nsl+wAA">
-<XPD:ATTR name="Name" type="string">tiempo</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">out int</XPD:ATTR>
-<XPD:REF name="BehavioralFeature">twg6LiO8jU68s+Y1/36AuwAA</XPD:REF>
-</XPD:OBJ>
-</XPD:OBJ>
-<XPD:OBJ name="Operations[2]" type="UMLOperation" guid="mZVIBznx/EK25w72X06yRQAA">
+<XPD:OBJ name="Operations[1]" type="UMLOperation" guid="mZVIBznx/EK25w72X06yRQAA">
 <XPD:ATTR name="Name" type="string">CargarTiempo</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">3</XPD:ATTR>
@@ -147,24 +127,23 @@
 <XPD:REF name="BehavioralFeature">mZVIBznx/EK25w72X06yRQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="Operations[3]" type="UMLOperation" guid="RWXNzxnsEEm8ssMP0ryjvwAA">
+<XPD:OBJ name="Operations[2]" type="UMLOperation" guid="RWXNzxnsEEm8ssMP0ryjvwAA">
 <XPD:ATTR name="Name" type="string">OrderListadoPorTiempo</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:ATTR name="#Attributes" type="integer">3</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="YcwU80IQzE2pLeFPmVjq7gAA">
-<XPD:ATTR name="Name" type="string">nombres</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Nombre</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">string[]</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="Vx2npWIvuUStVEQc1064BwAA">
-<XPD:ATTR name="Name" type="string">tiempos</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Tiempos</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">int[]</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[2]" type="UMLAttribute" guid="kr8pDbu4aESddA9W0hYgrwAA">
 <XPD:ATTR name="Name" type="string">Contador</XPD:ATTR>
-<XPD:ATTR name="StereotypeName" type="string">readonly</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 </XPD:OBJ>
