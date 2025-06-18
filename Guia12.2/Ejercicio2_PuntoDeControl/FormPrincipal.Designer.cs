@@ -32,12 +32,12 @@
             this.tbPatente = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbModelo = new System.Windows.Forms.TextBox();
             this.cbkEsElectrico = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tbModelo = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnVerEstadistica = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +93,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Ingreso";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(65, 112);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(207, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Modelo (Año de fabricación)";
+            // 
+            // tbModelo
+            // 
+            this.tbModelo.Location = new System.Drawing.Point(318, 112);
+            this.tbModelo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbModelo.Name = "tbModelo";
+            this.tbModelo.Size = new System.Drawing.Size(76, 26);
+            this.tbModelo.TabIndex = 6;
+            // 
             // cbkEsElectrico
             // 
             this.cbkEsElectrico.AutoSize = true;
@@ -124,41 +142,23 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Tipo de Vehículo";
             // 
-            // button1
+            // btnVerEstadistica
             // 
-            this.button1.Location = new System.Drawing.Point(467, 22);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 68);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Ver Estadista";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // tbModelo
-            // 
-            this.tbModelo.Location = new System.Drawing.Point(318, 112);
-            this.tbModelo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbModelo.Name = "tbModelo";
-            this.tbModelo.Size = new System.Drawing.Size(76, 26);
-            this.tbModelo.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 112);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Modelo (Año de fabricación)";
+            this.btnVerEstadistica.Location = new System.Drawing.Point(467, 22);
+            this.btnVerEstadistica.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnVerEstadistica.Name = "btnVerEstadistica";
+            this.btnVerEstadistica.Size = new System.Drawing.Size(165, 68);
+            this.btnVerEstadistica.TabIndex = 4;
+            this.btnVerEstadistica.Text = "Ver Estadista";
+            this.btnVerEstadistica.UseVisualStyleBackColor = true;
+            this.btnVerEstadistica.Click += new System.EventHandler(this.btnVerEstadistica_Click);
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 300);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnVerEstadistica);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -176,7 +176,7 @@
         private System.Windows.Forms.TextBox tbPatente;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVerEstadistica;
         private System.Windows.Forms.CheckBox cbkEsElectrico;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

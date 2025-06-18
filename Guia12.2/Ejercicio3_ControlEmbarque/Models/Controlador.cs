@@ -8,38 +8,66 @@ namespace Ejercicio3_ControlEmbarque.Models
 {
     public class Controlador
     {
-        public int [] IDs=new int[1000];
-        public string[] Origenes = new string[1000];
-        public double[] Pesos = new double[1000];
-        public int Contador = 0;
+        int [] IDs=new int[1000];
+        string[] origenes = new string[1000];
+        double[] pesos = new double[1000];
+        public int Contador { get; set; } = 0;
 
         public void AgregarContenedor(int Id, string pais, double peso) 
         {
             IDs[Contador] = Id;
-            Origenes[Contador] = pais;
-            Pesos[Contador] = peso;
+            origenes[Contador] = pais;
+            pesos[Contador] = peso;
             Contador++;
         }
 
+        public void VerRegistro(int n, out int iDBusqueda, out string origenBusqueda, out double pesoBusqueda)
+        {
+            iDBusqueda = -1;
+            origenBusqueda = "";
+            pesoBusqueda = 0.0;
+            if (n < ContadorBusqueda)
+            {
+                iDBusqueda = IDs[n];
+                origenBusqueda = origenes[n];
+                pesoBusqueda = pesos[n];
+            }
+        }
+
         #region relativo a la búsqueda
-        public int[] IDsBusqueda = new int[1000];
-        public string[] OrigenesBusqueda = new string[1000];
-        public double[] PesosBusqueda = new double[1000];
-        public int ContadorBusqueda;
-        public void BuscarPorOrigen(string pais)
+        int[] IDsBusqueda = new int[1000];
+        string[] origenesBusqueda = new string[1000];
+        double[] pesosBusqueda = new double[1000];
+        public int ContadorBusqueda { get; private set; } = 0;
+
+        public void VerRegistroFiltrado(int n, out int iDBusqueda, out string origenBusqueda, out double pesoBusqueda)
+        {
+            iDBusqueda = -1;
+            origenBusqueda = "";
+            pesoBusqueda = 0.0;
+            if (n < ContadorBusqueda)
+            {
+                iDBusqueda = IDsBusqueda[n];
+                origenBusqueda = origenesBusqueda[n];
+                pesoBusqueda = pesosBusqueda[n];
+            }
+        }
+
+        public void FiltrarPorOrigen(string pais)
         {
             ContadorBusqueda = 0;//importante poner a cero aquí
             for (int n = 0; n < Contador; n++)
             {
-                if (pais == Origenes[n])
+                if (pais == origenes[n])
                 {
                     IDsBusqueda[ContadorBusqueda] = IDs[n];
-                    OrigenesBusqueda[ContadorBusqueda] = OrigenesBusqueda[n];
-                    PesosBusqueda[ContadorBusqueda] = PesosBusqueda[n];
+                    origenesBusqueda[ContadorBusqueda] = origenesBusqueda[n];
+                    pesosBusqueda[ContadorBusqueda] = pesosBusqueda[n];
                     ContadorBusqueda++;
                 }
             }
         }
+
         #endregion
     }
 }

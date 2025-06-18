@@ -24,24 +24,31 @@ namespace Ejercicio2_PuntoDeControl
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            #region captura de datos de la pantalla
             string patente = tbPatente.Text;
             int tipoVehículo=cbTipoVehiculo.SelectedIndex;
             int modeloVehículo = Convert.ToInt32( tbModelo.Text );
             bool esElectrico = cbkEsElectrico.Checked;
+            #endregion
 
+            //invando el registrar vehículo
             controlador.RegistrarVehículo(patente, tipoVehículo, modeloVehículo, esElectrico);
 
+            #region limpiando controles para el próximo registro
             tbPatente.Clear();
             tbModelo.Clear();
             cbTipoVehiculo.SelectedIndex = -1;
             cbkEsElectrico.Checked = false;
+            #endregion
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnVerEstadistica_Click(object sender, EventArgs e)
         {
             FormResultados fVer = new FormResultados();
 
             controlador.ListarElectricosOrdenadosPorModelo();
+
+            fVer.lbxResultados.Items.Clear();
 
             if (controlador.ContadorElectricos > 0)
             {
@@ -49,16 +56,28 @@ namespace Ejercicio2_PuntoDeControl
 
                 for (int n = 0; n < controlador.ContadorElectricos; n++)
                 {
-                    string patente = controlador.PatentesElectricos[n];
-                    int modelo=controlador.ModelosElectricos[n];
-                    int tipo=controlador.TiposVehículos[n];
+                    string patente;
+                    int modelo;
+                    int tipo;
 
-                    fVer.lbxResultados.Items.Add($"\t{patente} - {modelo} - {tipo}");
+                    controlador.VerVehiculoElectrico(n, out patente, out modelo, out tipo);
+
+                    string tipoVehiculo="";
+                    switch (tipo)
+                    {
+                        case 1: tipoVehiculo = "Auto"; break;
+                        case 2: tipoVehiculo = "Motocicleta"; break;
+                        case 3: tipoVehiculo = "Camioneta"; break;
+                        case 4: tipoVehiculo = "Camión"; break;
+                        default: tipoVehiculo = "Desconocido"; break;
+                    }
+                
+                    fVer.lbxResultados.Items.Add($"\t{patente} - {modelo} - {tipoVehiculo}");
                 }
             }
             else
             {
-                fVer.lbxResultados.Items.Add($"Aún no se registraron vehículos");
+                fVer.lbxResultados.Items.Add($"Aún no se registraron vehículos eléctricos");
             }
 
             fVer.ShowDialog();

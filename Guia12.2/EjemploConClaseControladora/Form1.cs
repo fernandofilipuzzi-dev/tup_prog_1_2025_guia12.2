@@ -16,7 +16,7 @@ namespace EjemploConClaseControladora
     public partial class Form1 : Form
     {
         #region variables y metodos del dominio
-        Controlador c = new Controlador();
+        Servicio c = new Servicio();
         #endregion
 
 

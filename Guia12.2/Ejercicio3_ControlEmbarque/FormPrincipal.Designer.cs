@@ -106,7 +106,7 @@
             this.VerListado.Name = "VerListado";
             this.VerListado.Size = new System.Drawing.Size(212, 80);
             this.VerListado.TabIndex = 7;
-            this.VerListado.Text = "Ver Listado";
+            this.VerListado.Text = "Ver Listado completo";
             this.VerListado.UseVisualStyleBackColor = true;
             this.VerListado.Click += new System.EventHandler(this.VerListado_Click);
             // 

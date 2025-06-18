@@ -13,25 +13,25 @@ namespace EjemploSinClaseControladora
     public partial class Form1 : Form
     {
         #region variables y metodos del dominio
-        int[] Numeros = new int[1000];
-        int Contador = 0;
+        int[] numeros = new int[1000];
+        int contador = 0;
 
         void AgregarNumero(int nro)
         {
-            Numeros[Contador] = nro;
-            Contador++;
+            numeros[contador] = nro;
+            contador++;
         }
 
         double CalcularPromedio()
         {
             double acum = 0;
             double promedio = 0;
-            for (int n = 0; n < Contador; n++)
+            for (int n = 0; n < contador; n++)
             {
-                acum += Numeros[n];
+                acum += numeros[n];
             }
-            if (Contador > 0)
-                promedio = acum / Contador;
+            if (contador > 0)
+                promedio = acum / contador;
 
             return promedio;
         }

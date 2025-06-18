@@ -6,15 +6,23 @@ using System.Threading.Tasks;
 
 namespace EjemploConClaseControladora.Models
 {
-    public class Controlador
+    public class Servicio
     {
-        public int[] Numeros = new int[1000];
-        public int Contador = 0;
+        public int[] numeros = new int[1000];
+        public int Contador { get; private set; }
 
         public void AgregarNumero(int nro)
         {
-            Numeros[Contador] = nro;
+            numeros[Contador] = nro;
             Contador++;
+        }
+
+        public int VerRegistro(int n)
+        {
+            if (n>=0 && n < Contador)
+                return numeros[n];
+            else
+                return -1;
         }
 
         public double CalcularPromedio()
@@ -23,7 +31,7 @@ namespace EjemploConClaseControladora.Models
             double promedio = 0;
             for (int n = 0; n < Contador; n++)
             {
-                acum += Numeros[n];
+                acum += numeros[n];
             }
             if (Contador > 0)
                 promedio = acum / Contador;

@@ -64,7 +64,7 @@
     <Compile Include="FormVer.Designer.cs">
       <DependentUpon>FormVer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Controlador.cs" />
+    <Compile Include="Models\Servicio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

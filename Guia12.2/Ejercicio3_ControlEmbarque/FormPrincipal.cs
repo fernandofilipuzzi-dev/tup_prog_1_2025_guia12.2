@@ -40,13 +40,19 @@ namespace Ejercicio3_ControlEmbarque
 
             string pais = cbBuscar.Text;
 
-            controlador.BuscarPorOrigen(pais);
+            controlador.FiltrarPorOrigen(pais);
 
             if (controlador.ContadorBusqueda > 0)
             {
                 for (int n = 0; n < controlador.ContadorBusqueda; n++)
                 {
-                    fVer.lbxResultados.Items.Add($"{controlador.IDsBusqueda} - {controlador.OrigenesBusqueda}- {controlador.PesosBusqueda:f2}");
+                    int IDBusqueda;
+                    string OrigenBusqueda;
+                    double PesoBusqueda;
+
+                    controlador.VerRegistroFiltrado(n, out IDBusqueda, out OrigenBusqueda, out PesoBusqueda);
+
+                    fVer.lbxResultados.Items.Add($"{IDBusqueda} - {OrigenBusqueda} - {PesoBusqueda:f2}");
                 }
             }
             else
@@ -66,7 +72,13 @@ namespace Ejercicio3_ControlEmbarque
             {
                 for (int n = 0; n < controlador.Contador; n++)
                 {
-                    fVer.lbxResultados.Items.Add($"{controlador.IDs[n]} - {controlador.Origenes[n]}- {controlador.Pesos[n]:f2}");
+                    int IDBusqueda;
+                    string OrigenBusqueda;
+                    double PesoBusqueda;
+
+                    controlador.VerRegistro(n, out IDBusqueda, out OrigenBusqueda, out PesoBusqueda);
+
+                    fVer.lbxResultados.Items.Add($"{IDBusqueda} - {OrigenBusqueda}- {PesoBusqueda:f2}");
                 }
             }
             else

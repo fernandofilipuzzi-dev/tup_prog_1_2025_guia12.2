@@ -8,25 +8,37 @@ namespace Ejercicio2_PuntoDeControl.Models
 {
     public class Controlador
     {
-        public string[] Patentes=new string[1000];
-        public int [] TiposVehículos = new int[1000];
-        public int [] Modelos = new int[1000];
-        public bool[] SonElectricos = new bool[1000];
-        public int Contador = 0;
+        string[] Patentes=new string[1000];
+        int [] TiposVehiculo = new int[1000];
+        int [] Modelos = new int[1000];
+        bool[] SonElectricos = new bool[1000];
+        public int Contador { get; set; }
+
+        public Controlador()
+        {
+            Contador = 0;
+        }
 
         public void RegistrarVehículo(string patente, int tipo, int modelo, bool esElectrico)
         {
             Patentes[Contador] = patente;
-            TiposVehículos[Contador] = tipo;
+            TiposVehiculo[Contador] = tipo;
             Modelos[Contador] = modelo;
             SonElectricos[Contador] = esElectrico;           
             Contador++;
         }
 
-        public string[] PatentesElectricos = new string[1000];
-        public int[] TiposVehículosElectricos = new int[1000];
-        public int[] ModelosElectricos = new int[1000];
-        public int ContadorElectricos = 0;
+        string[] patentesElectricos = new string[1000];
+        int[] modelosElectricos = new int[1000];
+        int[] tiposVehículoElectricos = new int[1000];
+        public int ContadorElectricos { get; private set; } = 0;
+
+        public void VerVehiculoElectrico(int n, out string patente, out int modelo, out int tipo)
+        {
+            patente = patentesElectricos[n];
+            modelo = modelosElectricos[n];
+            tipo = tiposVehículoElectricos[n];
+        }
 
         public void ListarElectricosOrdenadosPorModelo() 
         {
@@ -36,9 +48,9 @@ namespace Ejercicio2_PuntoDeControl.Models
             {
                 if (SonElectricos[n] == true)
                 {
-                    PatentesElectricos[ContadorElectricos] = Patentes[n];
-                    ModelosElectricos[ContadorElectricos] = Modelos[n];
-                    TiposVehículosElectricos[ContadorElectricos] = TiposVehículosElectricos[n];
+                    patentesElectricos[ContadorElectricos] = Patentes[n];
+                    modelosElectricos[ContadorElectricos] = Modelos[n];
+                    tiposVehículoElectricos[ContadorElectricos] = TiposVehiculo[n];
                     ContadorElectricos++;//no olvidarse este detallito
                 }
             }
@@ -52,22 +64,27 @@ namespace Ejercicio2_PuntoDeControl.Models
             {
                 for (int m = n + 1; m < ContadorElectricos; m++)
                 {
-                    if (ModelosElectricos[n] > ModelosElectricos[m])
+                    if (modelosElectricos[n] > modelosElectricos[m])
                     {
-                        string patente = PatentesElectricos[m];
-                        PatentesElectricos[m] = PatentesElectricos[n];
-                        PatentesElectricos[n] = patente;
-
-                        int modelo = ModelosElectricos[m];
-                        ModelosElectricos[m] = ModelosElectricos[n];
-                        ModelosElectricos[n] = modelo;
-
-                        int tipoVehículomodelo = TiposVehículosElectricos[m];
-                        TiposVehículosElectricos[m] = TiposVehículosElectricos[n];
-                        TiposVehículosElectricos[n] = tipoVehículomodelo;
+                        IntercambiarElectricos(n, m);
                     }
                 }
             }
+        }
+
+        void IntercambiarElectricos(int n,int m)
+        {
+            string patente = patentesElectricos[m];
+            patentesElectricos[m] = patentesElectricos[n];
+            patentesElectricos[n] = patente;
+
+            int modelo = modelosElectricos[m];
+            modelosElectricos[m] = modelosElectricos[n];
+            modelosElectricos[n] = modelo;
+
+            int tipo = tiposVehículoElectricos[m];
+            tiposVehículoElectricos[m] = tiposVehículoElectricos[n];
+            tiposVehículoElectricos[n] = tipo;
         }
     }
 }
