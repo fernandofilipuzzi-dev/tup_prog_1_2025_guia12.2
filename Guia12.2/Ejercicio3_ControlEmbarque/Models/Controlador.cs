@@ -61,8 +61,8 @@ namespace Ejercicio3_ControlEmbarque.Models
                 if (pais == origenes[n])
                 {
                     IDsBusqueda[ContadorBusqueda] = IDs[n];
-                    origenesBusqueda[ContadorBusqueda] = origenesBusqueda[n];
-                    pesosBusqueda[ContadorBusqueda] = pesosBusqueda[n];
+                    origenesBusqueda[ContadorBusqueda] = origenes[n];
+                    pesosBusqueda[ContadorBusqueda] = pesos[n];
                     ContadorBusqueda++;
                 }
             }
