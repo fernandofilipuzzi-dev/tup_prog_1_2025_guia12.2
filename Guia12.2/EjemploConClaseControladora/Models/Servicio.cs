@@ -8,7 +8,7 @@ namespace EjemploConClaseControladora.Models
 {
     public class Servicio
     {
-        public int[] numeros = new int[1000];
+        int[] numeros = new int[1000];
         public int Contador { get; private set; }
 
         public void AgregarNumero(int nro)

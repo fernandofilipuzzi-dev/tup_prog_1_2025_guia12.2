@@ -37,15 +37,15 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(33, 35);
+            this.listBox1.Location = new System.Drawing.Point(13, 14);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(508, 504);
+            this.listBox1.Size = new System.Drawing.Size(525, 504);
             this.listBox1.TabIndex = 0;
             // 
             // btnFacturar
             // 
-            this.btnFacturar.Location = new System.Drawing.Point(585, 67);
+            this.btnFacturar.Location = new System.Drawing.Point(564, 52);
             this.btnFacturar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFacturar.Name = "btnFacturar";
             this.btnFacturar.Size = new System.Drawing.Size(140, 68);
@@ -56,7 +56,7 @@
             // 
             // btnRecaudacion
             // 
-            this.btnRecaudacion.Location = new System.Drawing.Point(585, 145);
+            this.btnRecaudacion.Location = new System.Drawing.Point(564, 130);
             this.btnRecaudacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRecaudacion.Name = "btnRecaudacion";
             this.btnRecaudacion.Size = new System.Drawing.Size(140, 73);
@@ -69,13 +69,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 560);
+            this.ClientSize = new System.Drawing.Size(738, 530);
             this.Controls.Add(this.btnRecaudacion);
             this.Controls.Add(this.btnFacturar);
             this.Controls.Add(this.listBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.ResumeLayout(false);

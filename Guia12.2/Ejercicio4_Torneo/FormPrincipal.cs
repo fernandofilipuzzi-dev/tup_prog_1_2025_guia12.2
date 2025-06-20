@@ -66,6 +66,7 @@ namespace Ejercicio4_Torneo
             int nroJugador = Convert.ToInt32(nudJugador.Value);
 
             FormResultados fVer = new FormResultados();
+            fVer.Text = "Estadistica por jugador";
 
             #region inicialización de ventana
             int[] Puntos=controlador.ListarPuntosPorJugador(nroJugador);
@@ -86,6 +87,7 @@ namespace Ejercicio4_Torneo
             int nroPartido = Convert.ToInt32(nudPartido.Value);
 
             FormResultados fVer = new FormResultados();
+            fVer.Text = "Listar puntos Jugadores de un partido";
 
             int[] puntos = controlador.ListarPuntosPorPartido(nroPartido);
 

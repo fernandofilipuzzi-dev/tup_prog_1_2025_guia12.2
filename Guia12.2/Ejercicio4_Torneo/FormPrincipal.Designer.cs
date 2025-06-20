@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.nudPartido = new System.Windows.Forms.NumericUpDown();
             this.btnListarPorPartido = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.gbCargaPuntosPartido.SuspendLayout();
             this.Estadistica.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // gbCargaPuntosPartido
             // 
+            this.gbCargaPuntosPartido.Controls.Add(this.label3);
             this.gbCargaPuntosPartido.Controls.Add(this.btnCargarPuntos);
             this.gbCargaPuntosPartido.Enabled = false;
             this.gbCargaPuntosPartido.Location = new System.Drawing.Point(13, 189);
@@ -86,7 +88,7 @@
             // 
             // btnCargarPuntos
             // 
-            this.btnCargarPuntos.Location = new System.Drawing.Point(35, 72);
+            this.btnCargarPuntos.Location = new System.Drawing.Point(35, 84);
             this.btnCargarPuntos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCargarPuntos.Name = "btnCargarPuntos";
             this.btnCargarPuntos.Size = new System.Drawing.Size(201, 62);
@@ -187,6 +189,16 @@
             this.btnListarPorPartido.UseVisualStyleBackColor = true;
             this.btnListarPorPartido.Click += new System.EventHandler(this.btnListarPorPartido_Click);
             // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.Window;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(254, 43);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Agregue los resultados de un partido. Se solicitan el punto de cada jugador.";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -230,6 +242,7 @@
         private System.Windows.Forms.Button btnListarPorPartido;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
