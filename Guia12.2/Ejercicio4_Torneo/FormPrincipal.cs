@@ -33,7 +33,7 @@ namespace Ejercicio4_Torneo
 
                 gbCargaPuntosPartido.Enabled = true;
 
-                nudJugador.Maximum = controlador.ContadorJugadores - 1;
+                nudJugador.Maximum = controlador.VerContadorJugadores() - 1;
             }
 
             gbCargaPuntosPartido.Text = $"No se han cargado partidos aún";
@@ -45,9 +45,9 @@ namespace Ejercicio4_Torneo
 
             FormPuntosTorneo fPuntosTorneo = new FormPuntosTorneo();
                         
-            for (int jugador = 0; jugador < controlador.ContadorJugadores; jugador++)
+            for (int jugador = 0; jugador < controlador.VerContadorJugadores(); jugador++)
             {
-                fPuntosTorneo.lbInstancia.Text = $"Jugador: {jugador} - {controlador.Nombres[jugador]}";
+                fPuntosTorneo.lbInstancia.Text = $"Jugador: {jugador} - {controlador.VerNombreJugador(jugador)}";
 
                 fPuntosTorneo.ShowDialog();
                 int punto = Convert.ToInt32(fPuntosTorneo.nudTorneo.Value);
@@ -56,9 +56,9 @@ namespace Ejercicio4_Torneo
             }
             controlador.FinalizarPartido();
 
-            nudPartido.Maximum = controlador.ContadorPartidos-1;
+            nudPartido.Maximum = controlador.VerContadorPartidos() - 1;
 
-            gbCargaPuntosPartido.Text = $"Último partido cargado: {controlador.ContadorPartidos}";
+            gbCargaPuntosPartido.Text = $"Último partido cargado: {controlador.VerContadorPartidos()}";
         }
 
         private void btnListarPorJugador_Click(object sender, EventArgs e)
@@ -70,8 +70,8 @@ namespace Ejercicio4_Torneo
             #region inicialización de ventana
             int[] Puntos=controlador.ListarPuntosPorJugador(nroJugador);
 
-            fVer.lbxResultados.Items.Add($"Jugador: {controlador.Nombres[nroJugador]}");
-            for (int partido = 0; partido < controlador.ContadorPartidos; partido++)
+            fVer.lbxResultados.Items.Add($"Jugador: {controlador.VerNombreJugador(nroJugador)}");
+            for (int partido = 0; partido < controlador.VerContadorPartidos(); partido++)
             {
                 int puntos = Puntos[partido];
                 fVer.lbxResultados.Items.Add($"Partido: {partido} - puntos: {puntos}");
@@ -92,9 +92,9 @@ namespace Ejercicio4_Torneo
             #region inicialización ventana
             fVer.lbxResultados.Items.Add($"Partido: {nroPartido}");
 
-            for (int jugador = 0; jugador < controlador.ContadorJugadores; jugador++)
+            for (int jugador = 0; jugador < controlador.VerContadorPartidos(); jugador++)
             {
-                string nombre = controlador.Nombres[jugador];
+                string nombre = controlador.VerNombreJugador(jugador);
                 int punto = puntos[jugador];
 
                 fVer.lbxResultados.Items.Add($"Jugador: {nombre} - puntos: {punto}");

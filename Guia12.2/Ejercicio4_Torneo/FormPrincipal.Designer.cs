@@ -183,7 +183,7 @@
             this.btnListarPorPartido.Name = "btnListarPorPartido";
             this.btnListarPorPartido.Size = new System.Drawing.Size(219, 63);
             this.btnListarPorPartido.TabIndex = 0;
-            this.btnListarPorPartido.Text = "Listar Puntos Jugadores de un partido";
+            this.btnListarPorPartido.Text = "Listar puntos Jugadores de un partido";
             this.btnListarPorPartido.UseVisualStyleBackColor = true;
             this.btnListarPorPartido.Click += new System.EventHandler(this.btnListarPorPartido_Click);
             // 
@@ -197,10 +197,12 @@
             this.Controls.Add(this.gbCargaPuntosPartido);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Torneo";
             this.groupBox1.ResumeLayout(false);
             this.gbCargaPuntosPartido.ResumeLayout(false);

@@ -60,7 +60,7 @@
 <XPD:ATTR name="Left" type="integer">384</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">68</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">311</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">129</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">160</XPD:ATTR>
 <XPD:REF name="Model">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="bdwL9d5/lkS9w/vOwtjzuwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="6J0/Paj1SkyOi3nTcNVaugAA">
@@ -96,7 +96,7 @@
 <XPD:REF name="Views[1]">w7Lj7uvCTU6gZEpQsBJzVQAA</XPD:REF>
 <XPD:REF name="Views[2]">EsoASJctQkuyZ0+JaRPUzAAA</XPD:REF>
 <XPD:REF name="Views[3]">dzfE0vU1ike3ZY4R1aMRaAAA</XPD:REF>
-<XPD:ATTR name="#Operations" type="integer">2</XPD:ATTR>
+<XPD:ATTR name="#Operations" type="integer">5</XPD:ATTR>
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="ubHK8JY0CUuzn8r1qUUh8QAA">
 <XPD:ATTR name="Name" type="string">InscribirJugador</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
@@ -120,6 +120,38 @@
 <XPD:ATTR name="Name" type="string">resultado</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">a+nd/M40B0Kmyt1nrjj2ywAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[2]" type="UMLOperation" guid="6gGirtXBakuldxMampbb7gAA">
+<XPD:ATTR name="Name" type="string">FinalizarPartido</XPD:ATTR>
+<XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[3]" type="UMLOperation" guid="SEA3kwNhRESoCTkBOB9MDwAA">
+<XPD:ATTR name="Name" type="string">ListarPuntosPorJugador</XPD:ATTR>
+<XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="GoXir2PJk06qkgCC6LDRKwAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int[]</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">SEA3kwNhRESoCTkBOB9MDwAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="+VZ60bGF6ky+6BNktZUEqwAA">
+<XPD:ATTR name="Name" type="string">int numeroJugador</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">SEA3kwNhRESoCTkBOB9MDwAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[4]" type="UMLOperation" guid="iz/wt8E1aUWCPwNL41gvowAA">
+<XPD:ATTR name="Name" type="string">ListarPuntosPorPartido</XPD:ATTR>
+<XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="+9yYIPzMh0Kdbi7+ePuf9wAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int[]</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">iz/wt8E1aUWCPwNL41gvowAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="8p2aaT4ktECM9g2Tq7x7AAAA">
+<XPD:ATTR name="Name" type="string">int numeroPartido</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">iz/wt8E1aUWCPwNL41gvowAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:ATTR name="#Attributes" type="integer">4</XPD:ATTR>

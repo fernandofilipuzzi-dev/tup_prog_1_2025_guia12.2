@@ -55,7 +55,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Puntos";
+            this.label1.Text = "puntos";
             // 
             // btnAgregar
             // 
@@ -110,7 +110,7 @@
             this.MinimizeBox = false;
             this.Name = "FormPuntosTorneo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Anotar Puntos de un jugador";
+            this.Text = "Anotar puntos de un jugador";
             ((System.ComponentModel.ISupportInitialize)(this.nudTorneo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

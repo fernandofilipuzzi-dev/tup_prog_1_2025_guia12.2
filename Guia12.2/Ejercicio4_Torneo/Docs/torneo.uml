@@ -58,9 +58,9 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">384</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">68</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">64</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">311</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">160</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">199</XPD:ATTR>
 <XPD:REF name="Model">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="bdwL9d5/lkS9w/vOwtjzuwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="6J0/Paj1SkyOi3nTcNVaugAA">
@@ -96,8 +96,43 @@
 <XPD:REF name="Views[1]">w7Lj7uvCTU6gZEpQsBJzVQAA</XPD:REF>
 <XPD:REF name="Views[2]">EsoASJctQkuyZ0+JaRPUzAAA</XPD:REF>
 <XPD:REF name="Views[3]">dzfE0vU1ike3ZY4R1aMRaAAA</XPD:REF>
-<XPD:ATTR name="#Operations" type="integer">5</XPD:ATTR>
-<XPD:OBJ name="Operations[0]" type="UMLOperation" guid="ubHK8JY0CUuzn8r1qUUh8QAA">
+<XPD:ATTR name="#Operations" type="integer">8</XPD:ATTR>
+<XPD:OBJ name="Operations[0]" type="UMLOperation" guid="TEhNdEyreUS8zHBmxxf9aQAA">
+<XPD:ATTR name="Name" type="string">VerContadorJugadores</XPD:ATTR>
+<XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="tKxTQ/36IU2jHOhq1wnQcQAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">TEhNdEyreUS8zHBmxxf9aQAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[1]" type="UMLOperation" guid="JECmKCKVd0eFgKX9Jc6rAwAA">
+<XPD:ATTR name="Name" type="string">VerContadorPartidos</XPD:ATTR>
+<XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="CZ25ym56eEuI7CoNuYJUHwAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">JECmKCKVd0eFgKX9Jc6rAwAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[2]" type="UMLOperation" guid="yKRKVel2tkyb0Xo3R5LA5AAA">
+<XPD:ATTR name="Name" type="string">VerNombreJugador</XPD:ATTR>
+<XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="5UchXPS+OEOaMFHIwF2thQAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">string</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">yKRKVel2tkyb0Xo3R5LA5AAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="SqbIylKUD0mVS2zzkN82TgAA">
+<XPD:ATTR name="Name" type="string">idx</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">yKRKVel2tkyb0Xo3R5LA5AAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[3]" type="UMLOperation" guid="ubHK8JY0CUuzn8r1qUUh8QAA">
 <XPD:ATTR name="Name" type="string">InscribirJugador</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
@@ -107,7 +142,7 @@
 <XPD:REF name="BehavioralFeature">ubHK8JY0CUuzn8r1qUUh8QAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="Operations[1]" type="UMLOperation" guid="a+nd/M40B0Kmyt1nrjj2ywAA">
+<XPD:OBJ name="Operations[4]" type="UMLOperation" guid="a+nd/M40B0Kmyt1nrjj2ywAA">
 <XPD:ATTR name="Name" type="string">AnotarResultadosPartido</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
@@ -122,11 +157,11 @@
 <XPD:REF name="BehavioralFeature">a+nd/M40B0Kmyt1nrjj2ywAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="Operations[2]" type="UMLOperation" guid="6gGirtXBakuldxMampbb7gAA">
+<XPD:OBJ name="Operations[5]" type="UMLOperation" guid="6gGirtXBakuldxMampbb7gAA">
 <XPD:ATTR name="Name" type="string">FinalizarPartido</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Operations[3]" type="UMLOperation" guid="SEA3kwNhRESoCTkBOB9MDwAA">
+<XPD:OBJ name="Operations[6]" type="UMLOperation" guid="SEA3kwNhRESoCTkBOB9MDwAA">
 <XPD:ATTR name="Name" type="string">ListarPuntosPorJugador</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
@@ -140,7 +175,7 @@
 <XPD:REF name="BehavioralFeature">SEA3kwNhRESoCTkBOB9MDwAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="Operations[4]" type="UMLOperation" guid="iz/wt8E1aUWCPwNL41gvowAA">
+<XPD:OBJ name="Operations[7]" type="UMLOperation" guid="iz/wt8E1aUWCPwNL41gvowAA">
 <XPD:ATTR name="Name" type="string">ListarPuntosPorPartido</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
@@ -156,22 +191,26 @@
 </XPD:OBJ>
 <XPD:ATTR name="#Attributes" type="integer">4</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="YcwU80IQzE2pLeFPmVjq7gAA">
-<XPD:ATTR name="Name" type="string">Nombres</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">nombres</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">string[]</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="Vx2npWIvuUStVEQc1064BwAA">
-<XPD:ATTR name="Name" type="string">Puntos</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">puntos</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">int[,]</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[2]" type="UMLAttribute" guid="Bcosiho+HUKQN7vnNwR/fAAA">
-<XPD:ATTR name="Name" type="string">ContadorJugadores</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">contadorJugadores</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[3]" type="UMLAttribute" guid="kr8pDbu4aESddA9W0hYgrwAA">
-<XPD:ATTR name="Name" type="string">ContadorPartidos</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">contadorPartidos</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 </XPD:OBJ>
