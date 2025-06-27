@@ -60,7 +60,7 @@
 <XPD:ATTR name="Left" type="integer">384</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">68</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">492</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">160</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">173</XPD:ATTR>
 <XPD:REF name="Model">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="bdwL9d5/lkS9w/vOwtjzuwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="6J0/Paj1SkyOi3nTcNVaugAA">
@@ -96,7 +96,7 @@
 <XPD:REF name="Views[1]">w7Lj7uvCTU6gZEpQsBJzVQAA</XPD:REF>
 <XPD:REF name="Views[2]">EsoASJctQkuyZ0+JaRPUzAAA</XPD:REF>
 <XPD:REF name="Views[3]">dzfE0vU1ike3ZY4R1aMRaAAA</XPD:REF>
-<XPD:ATTR name="#Operations" type="integer">2</XPD:ATTR>
+<XPD:ATTR name="#Operations" type="integer">3</XPD:ATTR>
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="ubHK8JY0CUuzn8r1qUUh8QAA">
 <XPD:ATTR name="Name" type="string">RegistrarGuia</XPD:ATTR>
 <XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
@@ -145,6 +145,21 @@
 <XPD:ATTR name="Name" type="string">guia</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">FByzyJfl2UeXcoe/tZG/egAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[2]" type="UMLOperation" guid="K9OU0WVZWE6loaRgf2u+ewAA">
+<XPD:ATTR name="Name" type="string">BuscarPorNumeroEstablecimiento</XPD:ATTR>
+<XPD:REF name="Owner">guPORIIpdUmLgnTrAHGhjQAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="2EnqFwh3dUKJvP46crQt8QAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int[]</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">K9OU0WVZWE6loaRgf2u+ewAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="a+X/o0cOxk6urFD8zqvsuQAA">
+<XPD:ATTR name="Name" type="string">establecimiento</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">K9OU0WVZWE6loaRgf2u+ewAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:ATTR name="#Attributes" type="integer">7</XPD:ATTR>
