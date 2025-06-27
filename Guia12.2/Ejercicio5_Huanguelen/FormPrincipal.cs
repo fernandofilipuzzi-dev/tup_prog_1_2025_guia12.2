@@ -13,7 +13,7 @@ namespace Ejercicio5_Huanguelen
 {
     public partial class FormPrincipal : Form
     {
-        Servicio c=new Servicio();
+        Servicio servicio=new Servicio();
         public FormPrincipal()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace Ejercicio5_Huanguelen
             int novillos = 0;
             int vaquillonas = 0;
 
-            int embarque = c.BuscarPorNumeroGuia(guia);
+            int embarque = servicio.BuscarPorNumeroGuia(guia);
             if (embarque < 0) //verifico si existe
             {
 
@@ -67,7 +67,7 @@ namespace Ejercicio5_Huanguelen
 
                 if (cate == 4)
                 {
-                    c.RegistrarGuia(guia, establecimiento, vacas, toros, novillos, vaquillonas);
+                    servicio.RegistrarGuia(guia, establecimiento, vacas, toros, novillos, vaquillonas);
                     MessageBox.Show("Registro agregado");
                 }
                 else
@@ -94,17 +94,18 @@ namespace Ejercicio5_Huanguelen
                 //falta ordenar
 
                 int guia = Convert.ToInt32(tbBuscarGuiaOEstablecimiento.Text);
-                int idx = c.BuscarPorNumeroGuia(guia);
+                int idx = servicio.BuscarPorNumeroGuia(guia);
 
                 if (idx > -1)
                 {
                     #region datos del embarque encontrado
-                    int establecimiento = c.NumerosEstablecimiento[idx];
+                    int establecimiento;
+                    int vacas;
+                    int toros;
+                    int novillos;
+                    int vaquillonas;
 
-                    int vacas = c.CantidadesVacas[idx];
-                    int toros = c.CantidadesToros[idx];
-                    int novillos = c.CantidadesNovillo[idx];
-                    int vaquillonas = c.CantidadesVaquillona[idx];
+                    servicio.VerEmbarque(idx, out guia, out establecimiento, out vacas, out toros, out novillos, out vaquillonas);
                     #endregion
 
                     formVer.listBox1.Items.Add($"Embarque(Guía de traslado):{guia}");
@@ -124,7 +125,7 @@ namespace Ejercicio5_Huanguelen
             {
                 int establecimiento = Convert.ToInt32(tbBuscarGuiaOEstablecimiento.Text);
                 int coincidencias = 0;
-                int[] idxS = c.BuscarPorNumeroEstablecimiento(establecimiento, ref coincidencias);
+                int[] idxS = servicio.BuscarPorNumeroEstablecimiento(establecimiento, ref coincidencias);
 
                 if (coincidencias > 0)
                 {
@@ -133,11 +134,12 @@ namespace Ejercicio5_Huanguelen
                         int idx = idxS[n];
 
                         #region datos del embarque encontrado
-                        int guia = c.NumerosGuia[idx];
-                        int vacas = c.CantidadesVacas[idx];
-                        int toros = c.CantidadesToros[idx];
-                        int novillos = c.CantidadesNovillo[idx];
-                        int vaquillonas = c.CantidadesVaquillona[idx];
+                        int guia;
+                        int vacas;
+                        int toros;
+                        int novillos;
+                        int vaquillonas;
+                        servicio.VerEmbarque(idx, out guia, out establecimiento, out vacas, out toros, out novillos, out vaquillonas);
                         #endregion
 
                         formVer.listBox1.Items.Add($"Embarque(Guía de traslado):{guia}");
@@ -165,18 +167,20 @@ namespace Ejercicio5_Huanguelen
         {
             FormResultados formVer = new FormResultados();
 
-            if (c.ContadorEmbarques > 0)
+            if (servicio.VerContadorEmbarques() > 0)
             {
-                for (int n = 0; n < c.ContadorEmbarques; n++)
+                for (int n = 0; n < servicio.VerContadorEmbarques(); n++)
                 {
-                    
+
                     #region datos del embarque encontrado
-                    int guia = c.NumerosGuia[n];
-                    int establecimiento = c.NumerosEstablecimiento[n];
-                    int vacas = c.CantidadesVacas[n];
-                    int toros = c.CantidadesToros[n];
-                    int novillos = c.CantidadesNovillo[n];
-                    int vaquillonas = c.CantidadesVaquillona[n];
+                    int guia;
+                    int establecimiento;
+                    int vacas;
+                    int toros;
+                    int novillos;
+                    int vaquillonas;
+
+                    servicio.VerEmbarque(n, out guia, out establecimiento, out vacas, out toros, out novillos, out vaquillonas);
                     #endregion
 
                     formVer.listBox1.Items.Add(

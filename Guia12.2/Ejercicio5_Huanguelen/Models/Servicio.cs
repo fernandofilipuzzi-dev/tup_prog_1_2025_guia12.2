@@ -8,34 +8,36 @@ namespace Ejercicio5_Huanguelen.Models
 {
     public class Servicio
     {
-        public int[] NumerosGuia = new int[1000];
-        public int[] NumerosEstablecimiento = new int[1000];
-        public int[] CantidadesVacas = new int[1000];
-        public int[] CantidadesToros = new int[1000];
-        public int[] CantidadesNovillo = new int[1000];
-        public int[] CantidadesVaquillona = new int[1000];
-        public int ContadorEmbarques = 0;
+        #region representa una serie de embarques de ganado
+        int[] numerosGuia = new int[1000];
+        int[] numerosEstablecimiento = new int[1000];
+        int[] cantidadesVacas = new int[1000];
+        int[] cantidadesToros = new int[1000];
+        int[] cantidadesNovillo = new int[1000];
+        int[] cantidadesVaquillona = new int[1000];
+        #endregion
 
-        public void RegistrarGuia(int nroGuia, int nroEstablecimiento, int vacas, 
-                                        int toros, int novillos, int vaquillonas)
+        int contadorEmbarques = 0;
+
+        public void RegistrarGuia(int nroGuia, int nroEstablecimiento, int vacas, int toros, int novillos, int vaquillonas)
         {
-            NumerosGuia[ContadorEmbarques] = nroGuia;
-            NumerosEstablecimiento[ContadorEmbarques] = nroEstablecimiento;
-            CantidadesVacas[ContadorEmbarques] = vacas;
-            CantidadesToros[ContadorEmbarques] = toros;
-            CantidadesNovillo[ContadorEmbarques] = novillos;
-            CantidadesVaquillona[ContadorEmbarques] = vaquillonas;
+            numerosGuia[contadorEmbarques] = nroGuia;
+            numerosEstablecimiento[contadorEmbarques] = nroEstablecimiento;
+            cantidadesVacas[contadorEmbarques] = vacas;
+            cantidadesToros[contadorEmbarques] = toros;
+            cantidadesNovillo[contadorEmbarques] = novillos;
+            cantidadesVaquillona[contadorEmbarques] = vaquillonas;
 
-            ContadorEmbarques++;
+            contadorEmbarques++;
         }
 
         public int BuscarPorNumeroGuia(int guia)
         {
             int idx = -1;
             int emb = 0;//recorro embarques
-            while (emb < ContadorEmbarques)
+            while (emb < contadorEmbarques)
             {
-                if (NumerosGuia[emb] == guia)
+                if (numerosGuia[emb] == guia)
                 {
                     idx = emb;
                 }
@@ -51,9 +53,9 @@ namespace Ejercicio5_Huanguelen.Models
             coincidencias = 0;
             
             int establIdx = 0;
-            while (establIdx < ContadorEmbarques)
+            while (establIdx < contadorEmbarques)
             {
-                if (NumerosEstablecimiento[establIdx] == establecimiento)
+                if (numerosEstablecimiento[establIdx] == establecimiento)
                 {
                     
                     idxs[coincidencias] = establIdx;
@@ -64,6 +66,31 @@ namespace Ejercicio5_Huanguelen.Models
             }
            
             return idxs;
+        }
+
+        public int VerContadorEmbarques()
+        {
+            return contadorEmbarques;
+        }
+
+        internal void VerEmbarque(int idx, out int guia, out int establecimiento, out int vacas, out int toros, out int novillos, out int vaquillonas)
+        {
+
+            guia = -1;
+            establecimiento = 0;
+            vacas = 0;
+            toros = 0;
+            novillos = 0;
+            vaquillonas = 0;
+            if (idx >= 0 && idx < contadorEmbarques)
+            {
+                guia = numerosGuia[idx];
+                establecimiento=numerosEstablecimiento[idx];
+                vacas = cantidadesVacas[idx];
+                toros = cantidadesToros[idx];
+                novillos = cantidadesNovillo[idx];
+                vaquillonas=cantidadesVaquillona[idx];
+            }
         }
     }
 }
