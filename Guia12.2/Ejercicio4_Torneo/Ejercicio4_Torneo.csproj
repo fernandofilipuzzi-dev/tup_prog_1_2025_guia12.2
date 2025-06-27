@@ -70,7 +70,7 @@
     <Compile Include="FormResultados.Designer.cs">
       <DependentUpon>FormResultados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Controlador.cs" />
+    <Compile Include="Models\Torneo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormInscribirCompetidor.resx">

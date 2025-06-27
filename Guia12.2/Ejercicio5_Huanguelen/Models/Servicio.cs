@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio5_Huanguelen.Models
 {
-    public class Controlador
+    public class Servicio
     {
         public int[] NumerosGuia = new int[1000];
         public int[] NumerosEstablecimiento = new int[1000];

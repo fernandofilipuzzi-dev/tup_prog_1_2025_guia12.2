@@ -13,7 +13,7 @@ namespace Ejercicio5_Huanguelen
 {
     public partial class FormPrincipal : Form
     {
-        Controlador c=new Controlador();
+        Servicio c=new Servicio();
         public FormPrincipal()
         {
             InitializeComponent();

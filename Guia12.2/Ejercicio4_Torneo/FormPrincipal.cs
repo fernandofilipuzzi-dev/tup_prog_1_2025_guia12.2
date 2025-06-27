@@ -14,7 +14,7 @@ namespace Ejercicio4_Torneo
 {
     public partial class FormPrincipal : Form
     {
-        Controlador controlador = new Controlador();
+        Torneo controlador = new Torneo();
 
         public FormPrincipal()
         {

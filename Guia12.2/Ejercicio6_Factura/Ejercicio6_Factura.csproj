@@ -58,7 +58,7 @@
     <Compile Include="FormFactura.Designer.cs">
       <DependentUpon>FormFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Controlador.cs" />
+    <Compile Include="Models\Servicio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormFactura.resx">

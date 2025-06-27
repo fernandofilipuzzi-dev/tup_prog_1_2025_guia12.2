@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio6_Factura.Models
 {
-    public class Controlador
+    public class Servicio
     {
         public int[] Productos = new int[1000];
         public double[] PreciosUd = new double[1000];

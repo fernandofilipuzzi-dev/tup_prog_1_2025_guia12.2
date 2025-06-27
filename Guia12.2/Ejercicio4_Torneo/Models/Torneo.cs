@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio4_Torneo.Models
 {
-    public class Controlador
+    public class Torneo
     {
         string[] nombres = new string[1000];
 

@@ -13,7 +13,7 @@ namespace Ejercicio6_Factura
 {
     public partial class FormPrincipal : Form
     {
-        Controlador c = new Controlador();
+        Servicio c = new Servicio();
         public FormPrincipal()
         {
             InitializeComponent();
