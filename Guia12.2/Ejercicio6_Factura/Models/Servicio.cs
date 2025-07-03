@@ -8,16 +8,16 @@ namespace Ejercicio6_Factura.Models
 {
     public class Servicio
     {
-        public int[] Productos = new int[1000];
-        public double[] PreciosUd = new double[1000];
-        public int contador=0;
+        int[] productos = new int[1000];
+        double[] preciosUd = new double[1000];
+        int contador=0;
 
         public double RecaudacionTotal = 0;
 
         public void AgregarProducto(int codigo, double ud)
         {
-            Productos[contador] = codigo;
-            PreciosUd[contador] = ud;
+            productos[contador] = codigo;
+            preciosUd[contador] = ud;
             contador++;
         }
 
@@ -27,11 +27,17 @@ namespace Ejercicio6_Factura.Models
             int n = 0;
             while (idx == -1 && n < contador)
             {
-                if (Productos[n] == codigo)
+                if (productos[n] == codigo)
                     idx = n;
                 n++;
             }
             return idx;
+        }
+
+        public void VerFactura(int idx, out int codigoProducto, out double precio)
+        {
+            codigoProducto = productos[idx];
+            precio = preciosUd[idx];
         }
     }
 }

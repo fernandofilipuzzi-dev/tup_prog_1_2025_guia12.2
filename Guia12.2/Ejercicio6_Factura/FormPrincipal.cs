@@ -13,7 +13,7 @@ namespace Ejercicio6_Factura
 {
     public partial class FormPrincipal : Form
     {
-        Servicio c = new Servicio();
+        Servicio servicio = new Servicio();
         public FormPrincipal()
         {
             InitializeComponent();
@@ -30,19 +30,20 @@ namespace Ejercicio6_Factura
                 int codigo = Convert.ToInt32(formFactura.tbCodigo.Text);
                 int cantidad = Convert.ToInt32(formFactura.tbCantidad.Text);
 
-                int idx = c.BuscarProducto(codigo);
+                int idx = servicio.BuscarProducto(codigo);
                 if (idx == -1)
                 {
                     MessageBox.Show("no encontrado");
                 }
                 else 
                 {
-                    double ud = c.PreciosUd[idx];
-                    formFactura.lbPrecioUd.Text = ud.ToString("0.00");
+                    servicio.VerFactura(idx, out int codigoProducto, out double precio);
 
-                    double precioTotalItems = ud * cantidad;
+                    formFactura.lbPrecioUd.Text = precio.ToString("0.00");
+
+                    double precioTotalItems = precio * cantidad;
                     
-                    listBox1.Items.Add($"{codigo} {cantidad} {ud} {precioTotalItems}");
+                    listBox1.Items.Add($"{codigo} {cantidad} {precio} {precioTotalItems}");
 
                     total += precioTotalItems;
                 }
@@ -52,7 +53,7 @@ namespace Ejercicio6_Factura
             {
                 listBox1.Items.Add($"Total a pagar: ${total}");
 
-                c.RecaudacionTotal += total;
+                servicio.RecaudacionTotal += total;
             }
             else
                 listBox1.Items.Clear();
@@ -60,14 +61,14 @@ namespace Ejercicio6_Factura
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            c.AgregarProducto(234, 20.2);
-            c.AgregarProducto(236, 23.2);
-            c.AgregarProducto(237, 10.2);
+            servicio.AgregarProducto(234, 20.2);
+            servicio.AgregarProducto(236, 23.2);
+            servicio.AgregarProducto(237, 10.2);
         }
 
         private void btnRecaudacion_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Recaudación total: ${c.RecaudacionTotal:f2}");
+            MessageBox.Show($"Recaudación total: ${servicio.RecaudacionTotal:f2}");
         }
     }
 }

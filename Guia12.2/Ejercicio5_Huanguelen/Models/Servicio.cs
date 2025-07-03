@@ -73,7 +73,7 @@ namespace Ejercicio5_Huanguelen.Models
             return contadorEmbarques;
         }
 
-        internal void VerEmbarque(int idx, out int guia, out int establecimiento, out int vacas, out int toros, out int novillos, out int vaquillonas)
+        public void VerEmbarque(int idx, out int guia, out int establecimiento, out int vacas, out int toros, out int novillos, out int vaquillonas)
         {
 
             guia = -1;
